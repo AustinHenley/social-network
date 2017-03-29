@@ -1,8 +1,12 @@
-header
+.navbar
 {
-	background-color: 53058C;
-	height: 200px;
-	width: 100%;
+	width:100%;
+	height:45px;
+	background-color:#8e44ad;
+	position:fixed;
+	top:0px;
+	left:0px;
+	border-bottom:5px solid #a05fb9;
 }
 
 left_panel
@@ -24,17 +28,6 @@ body
 {
 	background-color:#ecf0f1;  
 	font-family: 'Roboto', sans-serif;
-}
-
-.navbar
-{
-	width:100%;
-	height:45px;
-	background-color:#8e44ad;
-	position:fixed;
-	top:0px;
-	left:0px;
-	border-bottom:5px solid #a05fb9;
 }
 
 #logo
