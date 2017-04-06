@@ -52,9 +52,28 @@
                                     <div class="mdl-textfield mdl-js-textfield">
                                         <input class="mdl-textfield__input" type="text" id="post">
                                         <label class="mdl-textfield__label" for="post"><center>Write a post</center></label>
+                                        <button id="post_button" class="mdl-button mdl-js-button mdl-button--raised" type="button">Post</button>
+                                        <div id="post_toast" class="mdl-js-snackbar mdl-snackbar">
+                                            <div class="mdl-snackbar__text"></div>
+                                            <button class="mdl-snackbar__action" type="button"></button>
+                                        </div>
+                                        <script>
+                                            (function()
+                                             {
+                                                'use strict';
+                                                var snackbarContainer = document.querySelector("#post_button");
+                                                var showToastButton = document.querySelector("#post_toast");
+                                                
+                                                showToastButton.addEventListener('click' function(){
+                                                    'use strict';
+                                                    var data = {message: 'Posted Successfully!'};
+                                                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                                                });
+                                             }());
+                                        </script>
                                     </div>
                                 </form>
-                            
+                                
                             </div>
                         </div>
                     </center>
