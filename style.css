@@ -3,7 +3,12 @@ header
 	background-color: #53058C;
 }
 
-div .mdl-card-wide, div .mdl-card
+div .mdl-card-wide
+{
+	width: 90%;
+}
+
+div .mdl-card
 {
 	width: 90%;
 }
