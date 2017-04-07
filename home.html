@@ -89,6 +89,28 @@
                                 This is a post
                             </div>
                             <div class="mdl-card__actions mdl-card--border">
+                                 <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" id="post">
+                                        <label class="mdl-textfield__label" for="post"><center>Write a comment</center></label>
+                                    </div>
+                                <button id="post_button" class="mdl-button mdl-js-button mdl-button--raised" type="button">Post</button>
+                                        <div id="post_toast" class="mdl-js-snackbar mdl-snackbar">
+                                            <div class="mdl-snackbar__text"></div>
+                                            <button class="mdl-snackbar__action" type="button"></button>
+                                        </div>
+                                        <script>
+                                            (function() {
+                                                'use strict';
+                                                window['counter'] = 0;
+                                                var snackbarContainer = document.querySelector('#post_button');
+                                                var showToastButton = document.querySelector('#post_toast');
+                                                showToastButton.addEventListener('click', function() {
+                                                    'use strict';
+                                                    var data = {message: 'Example Message # ' + ++counter};
+                                                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                                                });
+                                            }());
+                                        </script>
                             </div>
                         </div>
                     </center>
