@@ -25,3 +25,23 @@ a
  	-webkit-border-radius: 100px;
  	-moz-border-radius: 100px;
 }
+
+body{
+    
+}
+.demo-card-wide.mdl-card {
+  width: 512px;
+  
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+#register_form{
+ margin-top:5%;  
+    margin-left:39%;
+}
