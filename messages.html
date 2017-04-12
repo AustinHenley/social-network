@@ -13,22 +13,31 @@
     </head>
     <body>
   <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
+              
       <img src="Logo3.svg" width="50px" hiegth="50px"/>
       <span class="mdl-layout-title">ailor</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
+      </div>
       <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="home.html"><div id="tt2" class="icon material-icons">home</div> Home</a>
-          <a class="mdl-navigation__link" href="notifications.html"><div id="tt2" class="icon material-icons">notifications</div> Notifications</a>
-          <a class="mdl-navigation__link" href="messages.html"><div id="tt2" class="icon material-icons">message</div> Messages</a>
-          <a class="mdl-navigation__link" href="profile.html"><div id="tt2" class="icon material-icons">account_circle</div> Profile</a>
-      </nav>
-    </div>
+      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+          <a href="#fixed-tab-1" class="mdl-layout__tab is-active"><div id="tt2" class="icon material-icons">home</div> Feed</a>
+          <a href="#fixed-tab-2" class="mdl-layout__tab"><div id="tt2" class="icon material-icons">face</div> Active Members</a>
+      </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Home</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="home.html">Home</a>
+      <a class="mdl-navigation__link" href="messages.html">Messages</a>
+      <a class="mdl-navigation__link" href="">Settings</a>
+      <a class="mdl-navigation__link" href="index.html">Log out</a>
+    </nav>
+  </div>
   </header>
   <main class="mdl-layout__content">
     <div class="page-content">
