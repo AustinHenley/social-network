@@ -17,7 +17,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="user.html"><img src="Logo3.svg" width="50px" hiegth="50px"/></a>
+      <img src="Logo3.svg" width="50px" hiegth="50px"/>
       <span class="mdl-layout-title">ailor</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
@@ -29,21 +29,90 @@
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="user.html">You</a>
       <a class="mdl-navigation__link" href="home.html">Home</a>
-      <a class="mdl-navigation__link" href="messages.html">Messages</a>
+      <a class="mdl-navigation__link" href="messages.html" data-badge="0">Messages</a>
       <a class="mdl-navigation__link" href="index.html">Log out</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
-        <div class="mdl-cell mdl-cell--4-col">
+	<div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+		<center>
             <div class="mdl-card-image mdl-card mdl-shadow--2dp">
                 <center>
-                    <img id="profile-image" src="User Icons/UserIconMagenta.png" width="100" height="100">
-                    Admin
+                    <img id="profile-image" src="UserIconMagenta.png" width="100" height="100">
+                    <h3 class="">Admin</h3>
                 </center>
             </div>
+			</center>
         </div>
+		<div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+		<center>
+            <div class="mdl-card-image mdl-card mdl-shadow--2dp">
+				<center>
+					<h3>Bio</h3>
+					<p>We are the creators of the website.</p>
+					<p>3 Followers</p>
+				</center>
+            </div>
+			</center>
+        </div>
+		<div class="mdl-cell mdl-cell--12-col">
+		<center>
+            <div class="mdl-card-image mdl-card mdl-shadow--2dp">
+				<center>
+					<h3>Uploads</h3>
+					<p>Nothing uploaded yet</p>
+				</center>
+            </div>
+		</center>
     </div>
+	</div>
+	<center>
+	<h5>Posts</h5>
+	</center>
+	<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--12-col">
+	<center>
+                        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+                            <div class="mdl-card__title">
+                                <h2 class="mdl-card__title-text"><div id="tt2" class="icon material-icons">account_circle</div><a href="user.html">Admin</a></h2>
+                            </div>
+                            <div class="mdl-card__supporting-text">
+                                This is a post
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                <h4 class="mdl-card__title-text"><div id="tt2" class="icon material-icons">account_circle</div><a href="user.html">Admin</a></h4>
+                                This is a test comment
+                            </div>
+                            <div class="mdl-card__actions mdl-card--border">
+                                 <div class="mdl-textfield mdl-js-textfield">
+                                        <input class="mdl-textfield__input" type="text" id="post">
+                                        <label class="mdl-textfield__label" for="post"><center>Write a comment</center></label>
+                                    </div>
+                                <button id="post_button" class="mdl-button mdl-js-button mdl-button--raised" type="button">Post</button>
+                                        <div id="post_toast" class="mdl-js-snackbar mdl-snackbar">
+                                            <div class="mdl-snackbar__text"></div>
+                                            <button class="mdl-snackbar__action" type="button"></button>
+                                        </div>
+                                        <script>
+                                            (function() {
+                                                'use strict';
+                                                window['counter'] = 0;
+                                                var snackbarContainer = document.querySelector('#post_button');
+                                                var showToastButton = document.querySelector('#post_toast');
+                                                showToastButton.addEventListener('click', function() {
+                                                    'use strict';
+                                                    var data = {message: 'Example Message # ' + ++counter};
+                                                    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+                                                });
+                                            }());
+                                        </script>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+	
   </main>
 </div>
     </body>
